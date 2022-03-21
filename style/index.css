@@ -19,9 +19,9 @@ img{
     bottom: 0;
     
 }
-.full{
+/* .full{
     position: relative;
-}
+} */
 .main{
     z-index: 1;
     position: absolute;

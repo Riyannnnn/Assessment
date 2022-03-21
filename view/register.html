@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/register.css">
+    <script src="https://kit.fontawesome.com/85abba5e00.js" crossorigin="anonymous"></script>
+    <script src="../function/register.js"></script>
+    <title>Register</title>
+</head>
+<body>
+    <div class="main">
+        <div class="head"><h2>Register</h2></div>
+        <div class="content">
+            <form id="form" action="javascript:result(event)">
+            <div class="name">
+                <label for="name">Name</label>
+                <input type="text" class="input" id="name" name="name" placeholder="Enter Your Name" >
+            </div>
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="email" class="input" id="email" name="email" placeholder="Enter Your Email" >
+            </div>
+            <div class="Npassword">
+                <label for="password">New password</label>
+                <input type="password" class="input" id="password" placeholder="Enter New Password"><i onclick="view1()" id="Newpassword" class="fa-solid fa-eye"></i>
+            </div>
+            <div class="Cpassword">
+                <label for="password">Confirm password</label>
+                <input type="password" class="input" id="Cpassword" placeholder="Confirm Password"><i onclick="view2()" id="Confirmpassword" class="fa-solid fa-eye"></i>
+            </div>
+            <div class="R-button">
+                <button onclick="validate()" id="button">Submit</button>
+            </div>
+        </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
