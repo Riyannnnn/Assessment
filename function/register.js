@@ -1,14 +1,11 @@
-function view1 (x) {
+function view1 () {
     
     var pwd = document.getElementById("password");
     var type = pwd.getAttribute("type")==="password"?"text":"password";
     pwd.setAttribute("type",type);
     var viewpwd = document.getElementById("Newpassword")
     var icon = viewpwd.getAttribute("class")==="fa-solid fa-eye"?"fa-solid fa-eye-slash":"fa-solid fa-eye";
-    viewpwd.setAttribute("class",icon);
-    
-
-    
+    viewpwd.setAttribute("class",icon);   
 }
 function view2 () {
     
@@ -19,30 +16,69 @@ function view2 () {
     var icon = viewpwd.getAttribute("class")==="fa-solid fa-eye"?"fa-solid fa-eye-slash":"fa-solid fa-eye";
     viewpwd.setAttribute("class",icon);
     
-
 }
 
-function validate () {
-    var value = document.getElementById("password").value;
-    console.log(value); 
-    var valid = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,15}$/;
-    if(value.match(valid)){
-        alert("correct");
-        
+function nameCheck () {
+    var name = document.getElementById("name").value;
+    var name2 = document.getElementById("name");
+    var validName = /^[A-Za-z][A-Za-z]{1,20}$/;
+    if(validName.test(name)){
+        name2.style.border="2px solid green"; 
+        return true;      
     }
     else{
-        alert("try again");
+        name2.style.border="2px solid red";
+        return false;
+       
     }
-passCheck()
+}
 
+function emailCheck () {
+    var email = document.getElementById("email").value;
+    var email2 = document.getElementById("email");
+    var validEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if(validEmail.test(email)){
+        email2.style.border="2px solid green"; 
+        return true;      
+    }
+    else{
+        email2.style.border="2px solid red";
+        return false;
+       
+    }
 }
 function passCheck () {
-    var pass1 = document.getElementById("password").value;
-    var pass2 = document.getElementById("Cpassword").value;
-    if(pass1==pass2){
-        button.disabled = false;
+    var pass = document.getElementById("password").value;
+    var pass2 = document.getElementById("password");
+    var validPass = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,15}$/;
+    if(validPass.test(pass)){
+        pass2.style.border="2px solid green";
+        return true;
+    }else{
+        pass2.style.border="2px solid red";
+        return false;
+    }   
+}
+  function confirmPass () {
+    var cPass= document.getElementById("Cpassword").value;
+    var cPass2= document.getElementById("Cpassword");
+    var cPass3= document.getElementById("password").value;
+    if(cPass==cPass3){
+        cPass2.style.border="2px solid green";
+        return true;
+    }else{
+        cPass2.style.border="2px solid red";
+        return false;
+    }
+
+}
+function validation () {
+    var button = document.getElementById("button");
+    if(nameCheck()===true && emailCheck()===true && passCheck()===true && confirmPass()===true){
+        button.disabled=false; 
+            
     }else{
         button.disabled=true;
-        alert("button is disabled");
     }
+
 }

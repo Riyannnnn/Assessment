@@ -11,27 +11,28 @@
 </head>
 <body>
     <div class="main">
-        <div class="head"><h2>Register</h2></div>
+        <div class="head"><i class="fa-brands fa-r-project"></i><h3>egister <i class="fa-brands fa-hackerrank"></i>ere</h3></div>
         <div class="content">
-            <form id="form" action="javascript:result(event)">
+            <form id="form" action="">
             <div class="name">
-                <label for="name">Name</label>
-                <input type="text" class="input" id="name" name="name" placeholder="Enter Your Name" >
+                <label for="name">Name</label><i class="fa-solid fa-user-alien"></i>
+                <input type="text" class="input" id="name" name="name" placeholder="Enter Your Name" oninput="validation()"><i class="fa-solid fa-user"></i>
             </div>
+                
             <div class="email">
                 <label for="email">Email</label>
-                <input type="email" class="input" id="email" name="email" placeholder="Enter Your Email" >
+                <input type="email" class="input" id="email" name="email" placeholder="Enter Your Email" oninput="validation()"><i class="fa-solid fa-envelope"></i>
             </div>
             <div class="Npassword">
                 <label for="password">New password</label>
-                <input type="password" class="input" id="password" placeholder="Enter New Password"><i onclick="view1()" id="Newpassword" class="fa-solid fa-eye"></i>
+                <input type="password" class="input" id="password" placeholder="Enter New Password" oninput="validation()"><i onclick="view1()" id="Newpassword" class="fa-solid fa-eye"></i>
             </div>
             <div class="Cpassword">
                 <label for="password">Confirm password</label>
-                <input type="password" class="input" id="Cpassword" placeholder="Confirm Password"><i onclick="view2()" id="Confirmpassword" class="fa-solid fa-eye"></i>
+                <input type="password" class="input" id="Cpassword" placeholder="Confirm Password" oninput="validation()"><i onclick="view2()" id="Confirmpassword" class="fa-solid fa-eye"></i>
             </div>
             <div class="R-button">
-                <button onclick="validate()" id="button">Submit</button>
+                <button onclick="validation()" id="button" disabled>Submit</button>
             </div>
         </form>
             </div>
