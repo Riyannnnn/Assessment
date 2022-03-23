@@ -1,0 +1,39 @@
+
+.header h2{
+    margin: auto;
+    height: 50px;
+    width: 400px;
+    background-color:rgb(49, 48, 48);
+    text-align: center;
+    color: azure;
+}
+.nav{
+    height: 100%;
+    width: 0;
+    background-color: rgb(37, 36, 36);
+    position: fixed;
+    top: 10;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5;
+    
+    
+}
+.nav a{
+    display: block;
+    padding-top: 30px;
+    text-decoration: none;
+    color: aliceblue;
+    padding-left: 30px;
+    transition: 0.3;
+
+}
+.nav a:hover{
+    color: brown;
+}
+.open{
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+}

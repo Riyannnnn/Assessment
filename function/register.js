@@ -76,9 +76,15 @@ function validation () {
     var button = document.getElementById("button");
     if(nameCheck()===true && emailCheck()===true && passCheck()===true && confirmPass()===true){
         button.disabled=false; 
+        var btn= document.getElementById("button");
+        btn.addEventListener("click",redirect)
             
     }else{
         button.disabled=true;
     }
 
 }
+function redirect(){
+    window.location.href="http://127.0.0.1:5501/view/login.html";
+}
+

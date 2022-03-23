@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/85abba5e00.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/index.css">
+    <script src="../function/index.js"></script>
     <title>Movie Anytime</title>
 </head>
 <body>
      <div class="main">
-            <div class="logo"><i class="fa-solid fa-video"></i></div>
-            <div class="login"><a class="loginText" href="login.html">LOGIN</a></div>
-            <div class="register"><a class="registerText" href="register.html">REGISTER HERE</a></div>
+            <div class="logo"><i class="fa-solid fa-video fa-9x"></i></div>
+            <div class="login"><a class="loginText" onclick="redirectLogin()">SignIn</a></div>
+            <div class="account"><p>Dont have an account? <span><i class="fa-solid fa-down-long fa"></i></span></p></div>
+            <div class="register"><a class="registerText" onclick="redirectRegister()">SignUp</a></div>
     </div>
     
 </body>
-</html>
+</html>     

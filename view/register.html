@@ -13,7 +13,7 @@
     <div class="main">
         <div class="head"><i class="fa-brands fa-r-project"></i><h3>egister <i class="fa-brands fa-hackerrank"></i>ere</h3></div>
         <div class="content">
-            <form id="form" action="">
+            <form id="form" >
             <div class="name">
                 <label for="name">Name</label><i class="fa-solid fa-user-alien"></i>
                 <input type="text" class="input" id="name" name="name" placeholder="Enter Your Name" oninput="validation()"><i class="fa-solid fa-user"></i>
@@ -32,7 +32,7 @@
                 <input type="password" class="input" id="Cpassword" placeholder="Confirm Password" oninput="validation()"><i onclick="view2()" id="Confirmpassword" class="fa-solid fa-eye"></i>
             </div>
             <div class="R-button">
-                <button onclick="validation()" id="button" disabled>Submit</button>
+                <button type="button" id="button" onclick="validation()" disabled>Submit</button>
             </div>
         </form>
             </div>
