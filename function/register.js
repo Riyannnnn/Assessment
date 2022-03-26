@@ -81,10 +81,11 @@ function validation () {
             
     }else{
         button.disabled=true;
+        
     }
 
 }
-function redirect(){
+function redirect (){
     window.location.href="http://127.0.0.1:5501/view/login.html";
 }
 

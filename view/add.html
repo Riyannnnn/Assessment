@@ -5,24 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/add.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ramaraja&display=swap" rel="stylesheet">
+    <script src="../function/add.js"></script>
     <title>Add Rating</title>
 </head>
 <body>
     <div class="container">
         <div class="header"><h2>Add Rating</h2></div>
         <div class="main">
-            <form action="" id="form">
+            <form action="../view/display.html" method="get" id="form">
                 <div class="movieName">
                     <label for="movieName">Movie Name</label>
-                    <input type="text" name="movieName" class="input" id="movieName" placeholder="Enter Movie Name">
+                    <input type="text" name="movieName" class="input" id="movieName" onchange="movieNameCheck()" placeholder="Enter Movie Name">
                 </div>
                 <div class="date">
                     <label for="date">Released Date</label>
-                    <input type="date" name="date" class="input" id="date">
+                    <input type="date" name="date" class="input" id="date" onchange="datecheck()">
                 </div>
                 <div class="genre">
                     <label for="genre">Genre</label>
-                    <select name="genre" id="genre" class="input">
+                    <select name="genre" id="genre" class="input" onchange="genreCheck()">
                         <option value="none">select</option>
                         <option value="action">Action</option>
                         <option value="comedy">Comedy</option>
@@ -38,44 +42,61 @@
                 </div>
                 <div class="description">
                     <label for="description">Description</label>
-                    <textarea name="description" id="description" cols="30" rows="10" placeholder="Movie summary"></textarea>
+                    <textarea name="description" id="description"class="input" cols="30" rows="10" placeholder="Movie summary" onchange="descriptionCheck()"></textarea>
                 </div>
                 <div class="duration">
                     <label for="duration">Duration</label>
-                    <input type="number" id="duration" name="duration" placeholder="Duration in hrs" min="1">
+                    <input type="number" id="duration" name="duration" class="input" placeholder="Duration in hrs" min="0.1" onchange="durationCheck()">
                 </div>
                 <div class="director">
                     <label for="director">Director</label>
-                    <input type="text" name="director" class="input" id="director" placeholder="Enter Director Name">
+                    <input type="text" name="director" class="input" id="director" placeholder="Enter Director Name" onchange="directorCheck()">
                 </div>
 
                 <div class="cast">
                     <label for="cast">Cast :</label><br>
                    <div> <span> <label for="c-name">Name</label>
-                        <input type="text" name="c-name" id="castName" placeholder="Name">
-                        <label for="Role">Role</label>
-                        <input type="text" name="role" id="role" placeholder="Role">
+                        <input type="text" name="c-name" id="castName" class="input" placeholder="Name" onchange="castCheck()">
+                        <label for="Role" class="role">Role</label>
+                        <input type="text" name="role" id="role"class="input"  placeholder="Role" onchange="roleCheck()">
                     </span>
                     </div>
                     <div><span> <label for="c-name">Name</label>
-                        <input type="text" name="c-name" id="castName" placeholder="Name">
-                        <label for="Role">Role</label>
-                        <input type="text" name="Role" id="Role" placeholder="Role">
+                        <input type="text" name="c-name" id="castName" class="input" placeholder="Name"onchange="castCheck()">
+                        <label for="Role" class="role">Role</label>
+                        <input type="text" name="Role" id="role" class="input" placeholder="Role" onchange="roleCheck()">
                     </span>
                     </div>
                     <div><span> <label for="c-name">Name</label>
-                        <input type="text" name="c-name" id="castName" placeholder="Name">
-                        <label for="Role">Role</label>
-                        <input type="text" name="Role" id="Role" placeholder="Role">
+                        <input type="text" name="c-name" id="castName" class="input" placeholder="Name"onchange="castCheck()">
+                        <label for="Role" class="role">Role</label>
+                        <input type="text" name="Role" id="role" class="input" placeholder="Role" onchange="roleCheck()">
                     </span>
                     </div>
                 </div>
                 <div class="poster">
                     <label for="poster">Poster</label>
-                    <input type="file" name="poster" id="poster" class="input">
+                    <input type="file" name="poster" id="poster" class="input" onchange="posterCheck()">
+                </div>
+                <label class="rating" for="rate">Rate it here</label>
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="text"></label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="text"></label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="text"></label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="text"></label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="text"></label>
+                  </div>
+                <div class="btn">
+                   <button type="submit" id="submit" >Submit</button>
                 </div>
             </form>
         </div>
+        <div class="footer"></div>
     </div>
 </body>
 </html>

@@ -3,6 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: rgb(47,49,55);
+    background-size: cover;
+    z-index: 0;
+    font-family: 'Ramaraja', serif;
+    
+  }
 div p{
     
     width: 60%;
@@ -16,28 +24,9 @@ div p{
 
 }
 
-body {
-    /* background-image: url('../images/charlie-chaplin-3283421_1920.jpg'); */background-color: rgb(47,49,55);
-    background-size: cover;
-    z-index: 0;
-    font-family: 'Ramaraja', serif;
-    
-  }
-
-.main{
-   
-    position: relative;
-    width: 25%;
-    height: 60vh;
-    background-color: rgb(16,16,16,0.6);
-    margin: 10% auto;
-    border-radius: 15px;
-    overflow: auto;
-    box-shadow: 6px 4px 4px 5px black;
-}
 .logo{
     color:rgb(44, 43, 43);
-   align-items: center;
+    align-items: center;
     margin-top:45px;
     margin-left: 150px;
     width: 100px;
@@ -68,11 +57,22 @@ body {
     border-radius: 20px;
     border: 3px solid rgb(65,64,83); 
     transition:1s;
-
+    
 }
 .login:hover{
     background-image: linear-gradient(to right,grey,black);
     transition: 0.5s;
+}
+.main{
+   
+    position: relative;
+    width: 25%;
+    height: 60vh;
+    background-color: rgb(16,16,16,0.6);
+    margin: 10% auto;
+    border-radius: 15px;
+    overflow: auto;
+    box-shadow: 6px 4px 4px 5px black;
 }
 .register{
     background-image: linear-gradient(to right,grey,black);
