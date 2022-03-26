@@ -11,7 +11,7 @@ function redirect(){
     window.location.href="http://127.0.0.1:5501/view/home.html";
     
 }
-function userValidate(){
+function userValidate (){
     var user = document.getElementById("email").value;
     var user2 = document.getElementById("email");
     console.log(user)
@@ -39,14 +39,14 @@ function passValidate () {
 }
 
 
-function validate(){
+function validate (){
+    var user = document.getElementById("email").value;
+    var pass = document.getElementById("password").value;
     var button = document.getElementById("button");
-    if(userValidate() && passValidate()){
-        button.disabled=false;
-        
+    if(userValidate()==true && passValidate()==true){
+        button.disabled=false;   
     }
         else{
-            button.disabled=true;
-            
+          button.disabled=true;     
     }
 }

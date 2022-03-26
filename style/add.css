@@ -35,6 +35,10 @@ button:hover{
 .description label{
     padding-right: 120px;
 }
+.description textarea{
+    width: 220px;
+    height: 75px;
+}
 div .rating{
     padding-right: 10px;
 }
@@ -120,4 +124,7 @@ div .rating{
 } 
 .rate:not(:checked) >  label:hover{
     color: gold;
+}
+textarea{
+    resize: none;
 }
