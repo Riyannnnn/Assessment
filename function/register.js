@@ -89,3 +89,10 @@ function redirect (){
     window.location.href="http://127.0.0.1:5501/view/login.html";
 }
 
+
+function show () {
+    var password = document.getElementById("pwd");
+    password.classList.remove("show");
+    password.style.display = "block";
+}
+

@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/85abba5e00.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ramaraja&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style/login.css">
     <script src="../function/login.js"></script>
     <title>Login</title>
 </head>
 <body>
     <div class="main">
+        <div class="logo"><i class="fa-solid fa-video fa-9x"></i></div>
         <div class="head"><h3>Sign In</h3></div>
-        <div class="content">
             <form id="form" action="">
             
             <div class="email">
@@ -21,15 +24,14 @@
             </div>
             <div class="Npassword">
                 <label for="password">Password</label>
-                <input type="password" class="input" id="password" placeholder="Enter Your Password" onchange="validate()"><i onclick="view1()" id="Newpassword" class="fa-solid fa-eye"></i>
+                <input type="password" class="input" id="password" placeholder="Enter Your Password" onchange="validate()" onfocus="show()"><i onclick="view1()"  id="Newpassword" class="fa-solid fa-eye"></i>
             </div>
-            <div class="forget"><a href="#">Forgot Password</a></div>
-            <div class="R-button">
+            <div class="forget"><a href="#">Forgot Password?</a></div>
+            <div class="r-button">
                 <button type="button"  id="button" onclick="redirect()" >Submit</button>
             </div>
        </form>
-            </div>
-        </div>
+        <div class="alert show" id="pwd"><p>Please enter 8 to 15 characters which contain at least one numeric digit, one uppercase, one lowercase letter and one special character.</p></div>
     </div>
 </body>
 </html>

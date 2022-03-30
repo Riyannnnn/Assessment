@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ramaraja&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/85abba5e00.js" crossorigin="anonymous"></script>
     <script src="../function/register.js"></script>
     <title>Register</title>
 </head>
 <body>
     <div class="main">
+        <div class="logo"><i class="fa-solid fa-video fa-9x"></i></div>
         <div class="head"><i class="fa-brands fa-r-project"></i><h3>egister <i class="fa-brands fa-hackerrank"></i>ere</h3></div>
-        <div class="content">
+        
             <form id="form" >
             <div class="name">
                 <label for="name">Name</label><i class="fa-solid fa-user-alien"></i>
@@ -25,7 +27,7 @@
             </div>
             <div class="Npassword">
                 <label for="password">New password</label>
-                <input type="password" class="input" id="password" placeholder="Enter New Password" oninput="validation()"><i onclick="view1()" id="Newpassword" class="fa-solid fa-eye"></i>
+                <input type="password" class="input" id="password" placeholder="Enter New Password" oninput="validation()" onfocus="show()"><i onclick="view1()" id="Newpassword" class="fa-solid fa-eye"></i>
             </div>
             <div class="Cpassword">
                 <label for="password">Confirm password</label>
@@ -35,8 +37,8 @@
                 <button type="button" id="button" onclick="validation()" disabled>Submit</button>
             </div>
         </form>
-            </div>
-        </div>
+        <div class="alert show" id="pwd"><p>Please enter 8 to 15 characters which contain at least one numeric digit, one uppercase, one lowercase letter and one special character.</p></div>
+        
     </div>
 </body>
 </html>

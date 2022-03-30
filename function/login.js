@@ -14,8 +14,8 @@ function redirect(){
 function userValidate (){
     var user = document.getElementById("email").value;
     var user2 = document.getElementById("email");
-    console.log(user)
-    if(user==""){
+    var validEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if(validEmail.test(user)){
         user2.style.border="2px solid red"; 
         return false;      
     }
@@ -31,6 +31,8 @@ function passValidate () {
     var validPass = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,15}$/;
     if(validPass.test(pass)){
         pass2.style.border="2px solid green";
+        var pwd = document.getElementById("pwd");
+        pwd.style.display = "none";
         return true;
     }else{
         pass2.style.border="2px solid red";
@@ -49,4 +51,10 @@ function validate (){
         else{
           button.disabled=true;     
     }
+}
+
+function show () {
+    var password = document.getElementById("pwd");
+    password.classList.remove("show");
+    password.style.display = "block";
 }

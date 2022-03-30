@@ -7,28 +7,26 @@
 body {
     background-color: rgb(47,49,55);
     background-size: cover;
-    z-index: 0;
     font-family: 'Ramaraja', serif;
     
   }
 div p{
-    
-    width: 60%;
+    width: 61%;
     height:20px ;
     margin: auto;
     padding-left:30px;
     margin-bottom: 8px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: medium;
+    font-size: 14px;
     color:rgb(119, 119, 121);
 
 }
 
 .logo{
     color:rgb(44, 43, 43);
-    align-items: center;
     margin-top:45px;
-    margin-left: 150px;
+    margin: auto;
+    margin-top: 35px;
     width: 100px;
     height: 100px;
     background-color: rgba(240, 248, 255, 0.486) ;
@@ -39,21 +37,19 @@ div p{
     font-size: 64px;
     padding-left: 14px;
     padding-top: 20px;
-    
-    
 }
 
 .login{
  
     background-image: linear-gradient(to right,black,grey);
     color: white;
-    width: 60%;
+    width: 65%;
     height: 65px;
     margin: auto;
     text-align: center;
     padding-top: 12px;
-    margin-bottom: 25px;
-    margin-top: 40px;
+    margin-bottom: 33px;
+    margin-top: 36px;
     border-radius: 20px;
     border: 3px solid rgb(65,64,83); 
     transition:1s;
@@ -66,8 +62,11 @@ div p{
 .main{
    
     position: relative;
-    width: 25%;
-    height: 60vh;
+    width: 380px;
+    height: 65vh;
+    padding-bottom: 28px;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(16,16,16,0.6);
     margin: 10% auto;
     border-radius: 15px;
@@ -75,9 +74,12 @@ div p{
     box-shadow: 6px 4px 4px 5px black;
 }
 .register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: linear-gradient(to right,grey,black);
     color: white;
-    width: 60%;
+    width: 65%;
     height: 65px;
     margin: auto;
     text-align: center;
@@ -104,3 +106,10 @@ div p{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+@media only screen and (max-width:768px){
+    .main{
+        width: 300px;
+        height: 64vh;
+        margin-top: 100px;
+    }
+}
