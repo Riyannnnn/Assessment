@@ -16,7 +16,7 @@
     <div class="container">
         <div class="header"><h2>Add Rating</h2></div>
         <div class="main">
-            <form action="../view/display.html" method="get" id="form">
+            <form id="form">
                 <div class="movieName">
                     <label for="movieName">Movie Name</label>
                     <input type="text" name="movieName" class="input" id="movieName" onchange="movieNameCheck()" placeholder="Enter Movie Name">
@@ -62,21 +62,21 @@
                 <div class="cast">
                     <label for="cast">Cast :</label><br>
                    <div> <span> <label for="c-name">Name</label>
-                        <input type="text" name="c-name" id="castName" class="input" placeholder="Name" onchange="castCheck()"><br>
+                        <input type="text" name="c-name" id="castName1" class="input" placeholder="Name" onchange="castCheck()"><br>
                          <label for="Role" class="role">Role</label>
-                        <input type="text" name="role" id="role"class="input"  placeholder="Role" onchange="roleCheck()"></span>
+                        <input type="text" name="role" id="role1"class="input"  placeholder="Role" onchange="roleCheck()"></span>
                     
                     </div>
                     <div><span> <label for="c-name">Name</label>
-                        <input type="text" name="c-name" id="castName" class="input" placeholder="Name"onchange="castCheck()"><br>
+                        <input type="text" name="c-name" id="castName2" class="input" placeholder="Name"onchange="castCheck()"><br>
                          <label for="Role" class="role">Role</label>
-                        <input type="text" name="Role" id="role" class="input" placeholder="Role" onchange="roleCheck()"></span>
+                        <input type="text" name="Role" id="role2" class="input" placeholder="Role" onchange="roleCheck()"></span>
                     
                     </div>
                     <div><span> <label for="c-name">Name</label>
-                        <input type="text" name="c-name" id="castName" class="input" placeholder="Name"onchange="castCheck()"><br>
+                        <input type="text" name="c-name" id="castName3" class="input" placeholder="Name"onchange="castCheck()"><br>
                          <label for="Role" class="role">Role</label>
-                        <input type="text" name="Role" id="role" class="input" placeholder="Role" onchange="roleCheck()"></span>
+                        <input type="text" name="Role" id="role3" class="input" placeholder="Role" onchange="roleCheck()"></span>
                     
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                             <div class="clear"></div>
                         </div>
                 <div class="btn">
-                   <button type="submit" id="submit" >Submit</button>
+                   <button type="button" id="submit" onclick="show()" >Submit</button>
                 </div>
             </form>
         </div>

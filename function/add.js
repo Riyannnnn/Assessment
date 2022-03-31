@@ -120,3 +120,34 @@ var maxDate = yyyy+'-'+mm+'-'+dd;
 console.log(maxDate)
 document.getElementById("date").setAttribute("max", maxDate);
 }
+
+
+
+
+function show () {
+    const req = new XMLHttpRequest();
+    req.open("GET","/demo.json");
+    req.setRequestHeader("accept","application/json")
+    req.send();
+    console.log(req)
+    req.onload = function() {
+        var toObj = JSON.parse(this.responseText)
+        console.log(toObj)
+        
+        document.getElementById("movieName").value = toObj.movie.movieName;
+        document.getElementById("date").value = toObj.movie.releasedDate;
+        document.getElementById("genre").value = toObj.movie.genre;
+        document.getElementById("description").value = toObj.movie.description;
+        document.getElementById("duration").value = toObj.movie.duration;
+        document.getElementById("director").value = toObj.movie.director;
+        document.getElementById("castName1").value = toObj.movie.castName1;
+        document.getElementById("role1").value = toObj.movie.role1;
+        document.getElementById("castName2").value =toObj.movie.castName2;
+        document.getElementById("role2").value = toObj.movie.role2;
+        document.getElementById("castName3").value =toObj.movie.castName3;
+        document.getElementById("role3").value = toObj.movie.role3;
+    }
+}
+
+
+
