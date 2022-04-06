@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/85abba5e00.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/home.css">
     <script src="../function/home.js"></script>
     <title>Home</title>
@@ -16,9 +17,130 @@
         <a href="#">SEARCH</a>
         <a href="add.html">ADD</a>
         <a href="#">EXPLORE</a>
+        <a href="../view/CRUD.html">CRUD</a>
     </div>
     <span class="open" onclick="openNav()">&#9776;</span>
-    <div class="content"><p>"HOME CONTENT HERE"</p></div>
+    <div class="topNav">
+        <span class="logo" id="logo"><i class="fa-solid fa-video fa-2x"></i></span>
+        <div class="tNav">
+            <div><a href="#">Home</a></div>
+            <div><a href="#">News</a></div>
+           <div> <a href="#">Categories</a></div>
+           <div><a href="#">Featured</a></div>
+           <div> <a href="#">Contact</a></div>
+           <div class="genre"><a href="#"><select name="genre" id="genre" >
+               <option value="">Genre</option>
+               <option value="action">Action</option>
+               <option value="comedy">Comedy</option>
+               <option value="drama">Drama</option>
+               <option value="fantasy">Fantasy</option>
+               <option value="horror">Horrror</option>
+               <option value="mystery">Mystery</option>
+               <option value="romance">Romance</option>
+               <option value="thriller">Thriller</option>
+               <option value="western">Western</option>
+               <option value="others">Others</option>
+              </select></a></div>
+            </div>
+        <div class="search" ><i class="fa-solid fa-magnifying-glass" id="icon"></i><input type="text" placeholder="Search Movie"></div>
+    </div>
+    <div class="sideShow" id="sideShow">
+            <h4>Have a look</h4>
+            <div class="show1"></div>
+            <div class="show2"></div>
+            <div class="show3"></div>
+            <div class="show4"></div>
+            <div class="show5"></div>
+    </div>
+    <div class="slide" id="slide">
+
+    </div>
+    <div class="trending" id="trending">
+        <div class="trending1">
+            <div class="content">
+             <div class="front">
+
+            </div>  
+            <div class="back">
+                <p>movie info here</p>
+            </div>
+            </div>
+        </div>
+        <div class="trending1">
+            <div class="content">
+                <div class="front">
+   
+               </div>  
+               <div class="back">
+                <p>movie info here</p> 
+               </div>
+            </div>
+        </div>
+        <div class="trending1">
+            <div class="content">
+                <div class="front">
+   
+               </div>  
+               <div class="back">
+                <p>movie info here</p>
+               </div>
+               </div>
+        </div>
+        <div class="trending1">
+            <div class="content">
+            <div class="front">
+
+           </div>  
+           <div class="back">
+            <p>movie info here</p>
+           </div>
+           </div>
+
+        </div>
+    </div>
+    <div class="popular" id="popular">
+        <div class="popular1">
+            <div class="content">
+                <div class="front">
+   
+               </div>  
+               <div class="back">
+                <p>movie info here</p>
+               </div>
+            </div>
+        </div>
+        <div class="popular1">
+            <div class="content">
+                <div class="front">
+                    
+               </div>  
+               <div class="back">
+                    <p>movie info here</p>
+               </div>
+            </div>
+        </div>
+        <div class="popular1">
+            <div class="content">
+                <div class="front">
+   
+               </div>  
+               <div class="back">
+                <p>movie info here</p>
+               </div>
+            </div>
+        </div>
+        <div class="popular1">
+            <div class="content">
+                <div class="front">
+   
+               </div>  
+               <div class="back">
+                <p>movie info here</p>
+               </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
 

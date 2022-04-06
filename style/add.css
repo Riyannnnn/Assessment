@@ -88,8 +88,8 @@ div .rating{
     text-shadow:
     0 0 10px #fff,
     0 0 3px #fff,
-    0 0 70px#fff ;
-    background-color:rgb( 33, 37, 41);
+    0 0 70px #fff ;
+    background-color:rgb(33, 37, 41);
 }
 .input{
     
@@ -105,6 +105,21 @@ div .rating{
     margin-bottom: 10px;
     border-style: none;
 }
+
+.input:hover{
+    background-color: rgb(84,91,105);
+}
+input[type=time]::-webkit-datetime-edit-ampm-field {
+    display: none;
+}
+label{
+    display: inline-block;
+    text-align: right;
+}
+label:hover{
+    color:black;
+}
+    
 label.pic{
     width:150px;
     height: 25px;
@@ -115,20 +130,8 @@ label.pic{
     border-radius: 18px;
     cursor: pointer;
     margin-bottom: 20px;
-
+    
 }
-.input:hover{
-    background-color: rgb(84,91,105);
-}
-label{
-    display: inline-block;
-    text-align: right;
-}
- label:hover{
-     color:black;
-}
-
-
 .main{
     background-color:rgb(52, 58, 64) ;
     width: 800px;
@@ -166,17 +169,6 @@ label{
 }
 
 
-select{
-    width: 416px !important;
-    height: 55px !important;
-} 
-textarea .input{
-    resize: none;
-    
-}
-.txt-center {
-    text-align: center;
-}
 
 .rating{
     position: relative;
@@ -197,7 +189,7 @@ textarea .input{
     width: 50px;
     background-color: rgb(52,58,64);
     
-
+    
 }
 .rating label::before{
     content: '★';
@@ -222,11 +214,19 @@ textarea .input{
 .rating input:checked ~ label:after{
     opacity: 1;
 }
-input[type=time]::-webkit-datetime-edit-ampm-field {
-    display: none;
-  }
 
 
+select{
+    width: 416px !important;
+    height: 55px !important;
+} 
+textarea .input{
+    resize: none;
+    
+}
+.txt-center {
+    text-align: center;
+}
 @media only screen and (max-width:768px){
     .main{
         width: 500px;
@@ -238,3 +238,8 @@ input[type=time]::-webkit-datetime-edit-ampm-field {
         margin-left: 30px;
     }
 }
+
+
+
+
+
