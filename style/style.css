@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.btn span{
+    margin: 8px;
+}
+.btn span button{
+    width: 80px;
+    height: 30px;
+    background-color:#1a406b;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+.btn span button:hover{
+    color:black;
+    background-color: #25a18e;
+}
+.checkbox{
+    position: absolute;
+    left: -58px;
+}
+
+.content{
+    width: 32rem;
+    height: 45rem;
+    background-color:rgb(182, 204, 254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    border-radius: 10px;
+    margin: auto;
+}
+.confirm{
+    height: 200px;
+    width: 50%;
+    background-color: rgb(0, 180, 216);
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    display: none;
+    
+}
+.confirm button{
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(2, 62, 138);
+    cursor: pointer;
+
+}
+.confirm span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.confirm .close{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+.confirm .close:hover{
+    color: red;
+    background-color: black;
+}
+.confirm button:hover{
+    background-color: #25a18e;
+    color: black;
+}
+.form div{
+    margin-top: 15px;
+}
+
+.heading{
+    position: absolute;
+    top: 1px;
+    bottom: 15px;
+    width: 100%;
+    height: 10px;
+    text-align: center;
+}
+h3{
+    margin-top: 10px;
+}
+input,select{
+    width: 95%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+}
+input,select,label{
+    display: block;
+}
+.main{
+    background-color:rgb(237, 242, 251);
+    /* height: 100%; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+}
+.nav{
+    height: 40px;
+    background-color:rgb(3, 4, 94);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    z-index:10 ;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    /* position: fixed; */
+
+}
+select{
+    height: 35px;
+    width: 102%;
+}
+textarea{
+    resize: none;
+    width: 95%;
+    height: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+@media only screen and (max-width : 768px){
+    .content{
+        width:25rem ;
+    }
+
+}

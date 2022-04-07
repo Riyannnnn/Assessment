@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../function/index.js"></script>
+    <title>Expense</title>
+</head>
+<body onload="employee()">
+    <div class="main" >
+        <div class="nav">
+            <a href="#">Create</a>
+            <a href="#">Edit</a>
+            <a href="#">View</a>
+        </div>
+        <div class="content">
+            <div class="heading"><h3>Expense Claim Details</h3></div>
+            
+            <form action="" class="form" id="form">
+                <div class="employee">
+                    <label for="employee">Employee</label>
+                    <select name="employee" id="employee" >
+                        <option value="select">select</option>
+                    </select>
+                </div>
+                <div class="expense-name">
+                    <label for="expense-name">Expense Name</label>
+                    <input type="text" class="expense-name-input" id="expense-name" placeholder="Expense Name">
+                </div>
+                <div class="payment-type">
+                    <label for="payment-type">Payment Type</label>
+                    <select name="payment-type" id="payment-type"></select>
+                </div>
+                <div class="payment-method">
+                    <label for="payment-method">Payment Method</label>
+                    <select name="payment-method" id="payment-method"></select>
+                </div>
+                <div class="payment-date">
+                    <label for="payment-date">Payment Date</label>
+                    <input type="date" id="payment-date" class="payment-date">
+                </div>
+                <div class="payout-with-salary">
+                    <label for="payout-with-salary">Payout with Salary</label>
+                    <input type="checkbox" id="payout-with-salary" class="checkbox">
+                </div>
+                <div class="notes">
+                    <label for="notes">Notes</label>
+                    <textarea name="notes" id="notes" cols="30" rows="3"></textarea>
+                </div>
+                <div class="total">
+                    <label for="total">Total</label>
+                    <input type="number" id="total">
+                </div>
+                <div class="currency">
+                    <label for="Currency">Currency</label>
+                    <select name="currency" id="currency"></select>
+                </div>
+                <div class="btn">
+                <span class="save">
+                    <button type="button" id="save" onclick="showConfirm()">Save</button>
+                </span>
+                <span class="cancel">
+                    <button type="button" id="Cancel">Cancel</button>
+                </span>
+            </div>
+
+        </div>
+        <div class="confirm" id="confirm">
+            <span class="close" onclick="hideConfirm()">&#10006</span>
+           <span> <button type="button" class="accept"> Accept</button></span>
+           <span><button type="button" class="reject">Reject</button></span>
+        </div>
+    </div>
+</body>
+</html>
