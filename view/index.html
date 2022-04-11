@@ -5,37 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/85abba5e00.js" crossorigin="anonymous"></script>
     <script src="../function/index.js"></script>
     <title>Expense</title>
 </head>
-<body onload="employee()">
-    <div class="main" >
+<body onload="employee();show()">
+    <div class="main" id="main" >
         <div class="nav">
             <a href="#">Create</a>
             <a href="#">Edit</a>
-            <a href="#">View</a>
+            <a onclick="listShow()">View</a>
         </div>
-        <div class="content">
-            <div class="heading"><h3>Expense Claim Details</h3></div>
+        <div class="content" id="content">
+            <div class="heading"><h3><i class="fa-solid fa-circle-info"></i>Expense Claim Details</h3></div>
             
             <form action="" class="form" id="form">
                 <div class="employee">
-                    <label for="employee">Employee</label>
+                    <label for="employee">Employee<i class="fa-thin fa-asterisk"></i></label>
                     <select name="employee" id="employee" >
                         <option value="select">select</option>
                     </select>
                 </div>
                 <div class="expense-name">
-                    <label for="expense-name">Expense Name</label>
+                    <label for="expense-name">Expense Name<i class="fa-thin fa-asterisk"></i></label>
                     <input type="text" class="expense-name-input" id="expense-name" placeholder="Expense Name">
                 </div>
                 <div class="payment-type">
                     <label for="payment-type">Payment Type</label>
-                    <select name="payment-type" id="payment-type"></select>
+                    <select name="payment-type" id="payment-type">
+                        <option value="select">select</option>
+                    </select>
                 </div>
                 <div class="payment-method">
                     <label for="payment-method">Payment Method</label>
-                    <select name="payment-method" id="payment-method"></select>
+                    <select name="payment-method" id="payment-method">
+                        <option value="select">select</option>
+                    </select>
                 </div>
                 <div class="payment-date">
                     <label for="payment-date">Payment Date</label>
@@ -50,16 +58,18 @@
                     <textarea name="notes" id="notes" cols="30" rows="3"></textarea>
                 </div>
                 <div class="total">
-                    <label for="total">Total</label>
+                    <label for="total">Total<i class="fa-thin fa-asterisk"></i></label>
                     <input type="number" id="total">
                 </div>
                 <div class="currency">
-                    <label for="Currency">Currency</label>
-                    <select name="currency" id="currency"></select>
+                    <label for="Currency">Currency<i class="fa-thin fa-asterisk"></i></label>
+                    <select name="currency" id="currency">
+                        <option value="select">select</option>
+                    </select>
                 </div>
                 <div class="btn">
                 <span class="save">
-                    <button type="button" id="save" onclick="showConfirm()">Save</button>
+                    <button type="button" id="save" onclick="createExp()">Save</button>
                 </span>
                 <span class="cancel">
                     <button type="button" id="Cancel">Cancel</button>
@@ -72,6 +82,35 @@
            <span> <button type="button" class="accept"> Accept</button></span>
            <span><button type="button" class="reject">Reject</button></span>
         </div>
+    <div class="card" id="card">
+        <div class="showList" id="showList" >
+            <div class="employeeName">
+                <label for="e-name">Employee Name</label>
+                <input type="text" class="empolyee-name" name="e-name" id="employeeName">
+            </div>
+            <div class="expenseName">
+                <label for="exp-name">Expense Name</label>
+                <input type="text" class="expense-name" name="exp-name" id="expenseName">
+            </div>
+            <div class="paymentDate">
+                <label for="date">Payment Date</label>
+                <input type="text" class="date" name="date" id="date">
+            </div>
+            <div class="notes">
+                <label for="notes">Notes</label>
+                <input type="text" class="notes" name="notes" id="notes">
+            </div>
+            <div class="total">
+                <label for="total">Total</label>
+               <input type="number" class="total" name="total" id="totalAmount"> 
+                <input type="text" class="currency-Type" id="currencyType">
+            </div>
+            <div class="btn">
+                <span><button>Edit</button></span>
+                <span><button>Delete</button></span>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 </html>

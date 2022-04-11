@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color:rgb(237, 242, 251);
+    font-family: 'Fira Sans', sans-serif;
+}
 .btn{
     display: flex;
     align-items: center;
@@ -24,11 +28,20 @@
     color:black;
     background-color: #25a18e;
 }
+.card{
+    /* margin-top: 50px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .checkbox{
     position: absolute;
     left: -58px;
 }
-
+.content{
+    display: none;
+}
 .content{
     width: 32rem;
     height: 45rem;
@@ -37,15 +50,18 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 30px;
+    top: 90px;
     border-radius: 10px;
     margin: auto;
+}
+.content .form .checkbox{
+    margin-bottom: 25px;
 }
 .confirm{
     height: 200px;
     width: 50%;
     background-color: rgb(0, 180, 216);
-    position: absolute;
+    position: absolute; 
     left: 25%;
     top: 50%;
     display: flex;
@@ -87,6 +103,9 @@
 .form div{
     margin-top: 15px;
 }
+.form i{
+    color: red;
+}
 
 .heading{
     position: absolute;
@@ -99,6 +118,10 @@
 h3{
     margin-top: 10px;
 }
+.heading h3 i{
+    margin-right: 10px;
+    
+}
 input,select{
     width: 95%;
     height: 25px;
@@ -106,17 +129,20 @@ input,select{
     border: none;
     padding: 5px 10px;
 }
+input, select:hover{
+    border-color: yellow;
+}
 input,select,label{
     display: block;
+}   
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
-.main{
-    background-color:rgb(237, 242, 251);
-    /* height: 100%; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-
-}
+label:hover{
+    color: red;
+}    
 .nav{
     height: 40px;
     background-color:rgb(3, 4, 94);
@@ -134,9 +160,33 @@ input,select,label{
     /* position: fixed; */
 
 }
+.nav a:hover{
+    color: red;
+}
 select{
     height: 35px;
     width: 102%;
+}
+.showList{
+    width: 300px;
+    height: 400px;
+    background-color: rgb(169, 214, 229);
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin: 30px;
+    display: none;
+}
+.showList input{
+    padding: 10px;
+    width: 75%;
+    margin-bottom: 10px;
+    display: inline-flex;
+}
+.showList .total span{
+    width: 42%;
+}
+.showList .total input{
+    width: 40%;
 }
 textarea{
     resize: none;
