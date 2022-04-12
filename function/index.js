@@ -1,16 +1,29 @@
- var token = document.cookie="idToken=eyJraWQiOiJhZm5VVTd6STJzdk1ISEcydkl3eE44enlxU0NXck1NNSttUDUxYTZcL0Uydz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNzRjYjg0OS0xNDQ5LTQ0YWUtYmU3YS0wNGU0OTRhNDczYmIiLCJhdWQiOiI3dDgwNzYzN3Q5bmdwYmI1ZHZrOWIwbXV0NSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImFmNDBiYmJmLWIzYmMtNDNjOS1hZDJhLWEwNDFkNDg3NWNiNCIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjQ5NjQ5MzkwLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtbm9ydGgtMS5hbWF6b25hd3MuY29tXC9ldS1ub3J0aC0xXzZzMGFMblZFRSIsImNvZ25pdG86dXNlcm5hbWUiOiJjNzRjYjg0OS0xNDQ5LTQ0YWUtYmU3YS0wNGU0OTRhNDczYmIiLCJleHAiOjE2NDk2NjE1NTAsImlhdCI6MTY0OTY1Nzk1MCwiZW1haWwiOiJnb3V0aGFtQHppcml1cy5pbiJ9.bKfx7h1GCazVoR2UoydWn0HMSeWE3QDcUps2D558pSp9OZDB4HxwqRiwQO2IDzi7Oh0qFqTvW9Vd67WZVnzFPTGaQ2tdi16gLQHZ-3sZuhnZexZBRXOlBhjVGNlIJgYChNmh_Dz7mCO2f_kUHAKbCCV-hpjrOClG8nS6MH15zqgjP7duGIH7n9Y6f1-7p8MH9jdZHEW0TqIMiNNYJ3Pmg6F-Nl3YXTXViM2lD39B22ABYMTl6CvzxQ0Fy2zkhfisGJC4V3djpVwUzvfdSJ65PxMDINRbxKOEA0HKv-R3pd_Vbgmi0MzVkjIeBCdayhwGahte1DV2T78YIKeyKGumCQ"
+ var token = document.cookie="idToken=eyJraWQiOiJhZm5VVTd6STJzdk1ISEcydkl3eE44enlxU0NXck1NNSttUDUxYTZcL0Uydz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNzRjYjg0OS0xNDQ5LTQ0YWUtYmU3YS0wNGU0OTRhNDczYmIiLCJhdWQiOiI3dDgwNzYzN3Q5bmdwYmI1ZHZrOWIwbXV0NSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjljNGRhNTk4LWRhYjAtNDA0OS1iMjQwLTYzMjk5OTRhODhhZSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjQ5NzM0NzA0LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtbm9ydGgtMS5hbWF6b25hd3MuY29tXC9ldS1ub3J0aC0xXzZzMGFMblZFRSIsImNvZ25pdG86dXNlcm5hbWUiOiJjNzRjYjg0OS0xNDQ5LTQ0YWUtYmU3YS0wNGU0OTRhNDczYmIiLCJleHAiOjE2NDk3MzgzMDQsImlhdCI6MTY0OTczNDcwNCwiZW1haWwiOiJnb3V0aGFtQHppcml1cy5pbiJ9.aMxmZ8mK3cAcABUv4QouYVC13XfqAiE3jMV4zYqlYLk7pwTw_fSr6m94jvvy6jD4jreBQDaSy7Wnl5xMSqiQGNj-3kgcqJozi9njjaeObbOMALr9gNzecDg1WgvPjN-RpoNQfBTJXb4mVmCfoGdJW9wE9si-ePlzu607oEmeoijjBZzzH-KDUSZzUQ9J4cvwJkAtSrWI7grx_9UgSbJ4n6CIWcq_WY9eirxl8jN4ZrmxzxE2pOV-DbBRjX9ltfcySwc-f7JtzEztmGPTndLBqiKA6oXBCq713eptUI9RuGBBVgCP2kCXWR2dy_JBMfS2Sap2UvANypNeGHL2E5zyUQ"
  var idToken= document.cookie.split("=")[1];
  console.log(idToken);
 
+
  function showConfirm(){
      document.getElementById("confirm").style.display="block";
+
  }
  function hideConfirm(){
      document.getElementById("confirm").style.display="none";
+     show()
  }
  function listShow(){
-    document.getElementById("showList").style.display="block";
-    document.getElementById("content").style.display="none";
+     document.getElementById("showList").style.display="block";
+     document.getElementById("content").style.display="none";
+     document.getElementById("card").style.display="flex";
+ }
+ function createShow(){
+     document.getElementById("content").style.display="flex";
+     document.getElementById("card").style.display="none";
+     document.getElementById("head2").style.display="none";
+     document.getElementById("head").style.display="block";
+     document.getElementById("create").style.display="block";
+     document.getElementById("update").style.display="none";
+     document.forms[0].reset()
  }
 
  function employee () {
@@ -38,8 +51,6 @@
                 option.value=data.dropdownList[item].id;
                 selectEmp.appendChild(option);
             }
-        }else{
-            // alert("An Error Occured ")
         }
     }
     employeeReq.send();
@@ -126,16 +137,17 @@ function createExp (){
             document.getElementById("payout-with-salary").value="No";
         }
     }
-    const createReq = new XMLHttpRequest();
+    var createReq = new XMLHttpRequest();
     createReq.open("POST","http://localhost/ec/expense",true);
     createReq.setRequestHeader("Accept", "application/json");
     createReq.setRequestHeader("Content-Type", "application/json");
     createReq.setRequestHeader("Companyid","14");
-    createReq.setRequestHeader("Access-Control-Allow-Origin","*");
     createReq.setRequestHeader("Authorization","Bearer"+idToken);
     createReq.onreadystatechange=function(){
         if(createReq.status==200 && createReq.readyState==4){
             console.log(this.status)
+            alert("Successful");
+            listShow()
         }
     }
     var details = { 
@@ -171,16 +183,17 @@ function show(){
     req.setRequestHeader("Companyid","14");
     req.onreadystatechange=function(){
         if(this.readyState==4){
-            if(this.status==200){
+            if(this.status==200){   
                 json=JSON.parse(this.responseText);
                 console.log(json);
                 for(let item=0;item<json.expenses.length;item++){
+                    document.getElementById("id").value=json.expenses[item].id;
                     document.getElementById("employeeName").value=json.expenses[item].employee["name"];
                     document.getElementById("expenseName").value=json.expenses[item].name;
-                    document.getElementById("date").value=json.expenses[item].invoiceDate;
+                    document.getElementById("date").value=json.expenses[item].invoiceDate.split("T")[0];
                     document.getElementById("notes").value=json.expenses[item].notes;
-                    if(document.getElementById("notes").value=json.expenses[item].notes==""|| document.getElementById("notes").value==null){
-                        document.getElementById("notes").value="---"
+                    if(document.getElementById("note").value=json.expenses[item].notes==""|| document.getElementById("note").value==null){
+                        document.getElementById("note").value="---"
                     }
                     document.getElementById("totalAmount").value=json.expenses[item].amount;
                     document.getElementById("currencyType").value=json.expenses[item].currency["currencyCode"];
@@ -194,4 +207,115 @@ function show(){
         }
     var obj={}
     req.send(JSON.stringify(obj));
+}
+
+function deleted (ref) {
+       
+    { var id = ref.parentElement.parentElement.parentElement.getElementsByTagName("input")[0].value;
+        console.log(id);
+        const deleteReq = new XMLHttpRequest();
+        deleteReq.open("DELETE","http://localhost/ec/expense/"+id,true);
+        deleteReq.setRequestHeader("Content-type","application/json");
+        deleteReq.setRequestHeader("Authorization","Bearer"+idToken);
+        deleteReq.setRequestHeader("Companyid","14");
+        deleteReq.onreadystatechange = function(){
+            if(deleteReq.readyState==4){
+            if(deleteReq.status==200){
+               
+                showConfirm()
+                
+            }   
+            }
+        }
+    deleteReq.send();}
+    
+}
+
+
+function showEdit(){
+    document.getElementById("content").style.display="flex";
+    document.getElementById("card").style.display="none";
+    document.getElementById("head").style.display="none";
+    document.getElementById("head2").style.display="block";
+    document.getElementById("create").style.display="none";
+    document.getElementById("update").style.display="block";
+}
+
+function getSingleCard(ref){
+    showEdit()
+    var id=ref.parentElement.parentElement.parentElement.getElementsByTagName("input")[0].value;
+    const getSCReq = new XMLHttpRequest();
+    getSCReq.open("GET","http://localhost/ec/expenses/"+id,true);
+    getSCReq.setRequestHeader("Accept","application/json");
+    getSCReq.setRequestHeader("Companyid","14");
+    getSCReq.setRequestHeader("Content-type","application/json");
+    getSCReq.setRequestHeader("Access-Control-Allow-Origin","*");
+    getSCReq.setRequestHeader("Authorization","Bearer"+idToken);
+    getSCReq.onreadystatechange=function(){
+        if(getSCReq.status==200 && getSCReq.readyState==4){
+            console.log(this.responseText);
+            var data= JSON.parse(this.responseText);
+            console.log(data);
+            document.getElementById("idd").value=data.expense.id;
+            document.getElementById("employee").value=data.expense.employee.userId;
+            document.getElementById("expense-name").value=data.expense.name;
+            document.getElementById("payment-type").value=data.expense.paymentType.id;
+            document.getElementById("payment-method").value=data.expense.paymentMethod.id;
+            document.getElementById("payment-date").value=data.expense.invoiceDate.split("T")[0];
+            document.getElementById("payout-with-salary").checked=data.expense.payoutWithSalary;
+            document.getElementById("notes").value=data.expense.notes;
+            document.getElementById("total").value=data.expense.amount;
+            document.getElementById("currency").value=data.expense.currency.currencyCode;
+        }
+
+    }
+    getSCReq.send()
+}
+
+function updateData(ref){
+    
+    var id = ref.parentElement.parentElement.parentElement.getElementsByTagName("input")[0].value;
+    console.log(id);
+
+    const putReq = new XMLHttpRequest();
+    putReq.open("PUT","http://localhost/ec/expense?id="+id,true);
+    putReq.setRequestHeader("Accept","application/JSON");
+    putReq.setRequestHeader("Content-Type", "application/json");
+    putReq.setRequestHeader("Authorization","Bearer"+idToken);
+    putReq.setRequestHeader("Companyid","14");
+    putReq.onreadystatechange = function (){
+        if (putReq.readyState == 4 && putReq.status==200) {
+           console.log(putReq.status);
+           console.log(putReq.responseText); 
+           alert("Success"); 
+           show()         
+        }
+    }
+    var obj = {
+        "attachments" : [],
+    "amount" :parseInt(document.getElementById("total").value),
+    "currency" : {
+        "currencyCode" : document.getElementById("currency").value,
+    },
+    "employee" : {
+        "userId":parseInt(document.getElementById("employee").value),
+    },
+    "paymentType" : {
+        "id" :parseInt(document.getElementById("payment-type").value),
+    },
+    "paymentMethod" : {
+        "id" :parseInt(document.getElementById("payment-method").value),
+    },
+    "invoiceDate" :document.getElementById("payment-date").value,
+    "name" : document.getElementById("expense-name").value,
+    "notes" : " ",
+    "payoutWithSalary" : document.getElementById("payout-with-salary").checked,
+    "lineItems": [],
+    "dimensions" : []
+    }
+    var json= JSON.stringify(obj)
+    putReq.send(json)
+    document.getElementById("content").style.display="none";
+    document.getElementById("card").style.display="flex";
+    
 }

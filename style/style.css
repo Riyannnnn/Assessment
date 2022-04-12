@@ -3,8 +3,11 @@
     margin: 0;
 }
 body{
-    background-color:rgb(237, 242, 251);
-    font-family: 'Fira Sans', sans-serif;
+    background-image: linear-gradient(to bottom right,rgb(186, 235, 255),rgb(197, 93, 246));
+     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+     background-size: cover;
 }
 .btn{
     display: flex;
@@ -26,47 +29,46 @@ body{
 }
 .btn span button:hover{
     color:black;
-    background-color: #25a18e;
+    background-color: #2d00f7;
 }
 .card{
-    /* margin-top: 50px; */
-    display: flex;
+    padding-top: 100px;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .checkbox{
     position: absolute;
-    left: -58px;
+    left: 13px;
 }
-.content{
-    display: none;
-}
+
 .content{
     width: 32rem;
     height: 45rem;
-    background-color:rgb(182, 204, 254);
+    background-color: #d0d1ff;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 90px;
+    flex-direction: column;
     border-radius: 10px;
     margin: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 5px black ;
 }
 .content .form .checkbox{
     margin-bottom: 25px;
 }
+.content #head2{
+    display: none;
+}
 .confirm{
-    height: 200px;
-    width: 50%;
-    background-color: rgb(0, 180, 216);
-    position: absolute; 
-    left: 25%;
-    top: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color:  rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(5px);
+    position: fixed; 
     border-radius: 5px;
     display: none;
     
@@ -76,9 +78,20 @@ body{
     height: 50px;
     margin: 20px;
     border-radius: 15px;
-    color: white;
-    background-color: rgb(2, 62, 138);
+    color: black;
+    background-color: #e7c6ff;
     cursor: pointer;
+
+}
+.confirm .box{
+    display: block;
+    position: relative;
+    width: 40%;
+    height: 190px;
+    background-color: cornflowerblue;
+    margin: auto;
+    margin-top: 25%;
+    border-radius: 30px;
 
 }
 .confirm span{
@@ -89,16 +102,19 @@ body{
 }
 .confirm .close{
     position: absolute;
-    right: 2px;
-    top: 2px;
+    right: 15px;
+    top: 7px;
 }
 .confirm .close:hover{
     color: red;
-    background-color: black;
+    background-color:white;
 }
 .confirm button:hover{
     background-color: #25a18e;
     color: black;
+}
+.form .id{
+    display: none;
 }
 .form div{
     margin-top: 15px;
@@ -106,20 +122,13 @@ body{
 .form i{
     color: red;
 }
-
-.heading{
-    position: absolute;
-    top: 1px;
-    bottom: 15px;
-    width: 100%;
-    height: 10px;
-    text-align: center;
-}
 h3{
     margin-top: 10px;
+    text-shadow: 1px 1px ;
 }
 .heading h3 i{
     margin-right: 10px;
+    text-shadow: none;
     
 }
 input,select{
@@ -128,9 +137,13 @@ input,select{
     border-radius: 5px;
     border: none;
     padding: 5px 10px;
+    box-shadow: 2px 2px 2px grey;
 }
 input, select:hover{
     border-color: yellow;
+}
+input .checkbox{
+    box-shadow: none;
 }
 input,select,label{
     display: block;
@@ -145,24 +158,41 @@ label:hover{
 }    
 .nav{
     height: 40px;
-    background-color:rgb(3, 4, 94);
+     background-image: linear-gradient(to right,rgb(45, 0, 247),rgb(242, 0, 137));
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index:10 ;
+}
+.nav .fa-user{
+    color: white;
+    position: absolute;
+    left: 10px;
+    font-size: 35px;
+}
+.nav .fa-user:hover{
+    color:black;
 }
 .nav a{
     color: white;
     text-decoration: none;
-    margin: 10px;
-    /* position: fixed; */
-
+    margin: 30px;
+    font-weight: 300;
 }
 .nav a:hover{
-    color: red;
+    color:black;
 }
+.nav a i{
+    font-size: 20px;
+    padding: 7px;
+}
+.payout-with-salary input{
+    box-shadow: none;
+}
+
 select{
     height: 35px;
     width: 102%;
@@ -182,11 +212,17 @@ select{
     margin-bottom: 10px;
     display: inline-flex;
 }
+.showList .id{
+    display: none;
+}
 .showList .total span{
     width: 42%;
 }
 .showList .total input{
     width: 40%;
+}
+#update{
+    display: none;
 }
 textarea{
     resize: none;

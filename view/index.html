@@ -15,23 +15,28 @@
 <body onload="employee();show()">
     <div class="main" id="main" >
         <div class="nav">
-            <a href="#">Create</a>
-            <a href="#">Edit</a>
-            <a onclick="listShow()">View</a>
+            <i class="fa-solid fa-user"></i>
+            <a onclick="createShow()"><i class="fa-solid fa-circle-plus"></i>Create</a>
+            <a onclick="listShow()"><i class="fa-solid fa-pen-to-square"></i>Edit</a>
+            <a onclick="listShow()"><i class="fa-solid fa-eye"></i>View</a>
         </div>
         <div class="content" id="content">
-            <div class="heading"><h3><i class="fa-solid fa-circle-info"></i>Expense Claim Details</h3></div>
+            <div class="heading" id="head"><h3><i class="fa-solid fa-circle-info"></i>Expense Claim Details</h3></div>
+            <div class="heading" id="head2"><h3>Edit Details</h3></div>
             
-            <form action="" class="form" id="form">
+            <form onsubmit="event.preventDefault();" class="form" id="form">
+                <div class="id">
+                    <input type="text" class="id" id="idd">
+                </div>
                 <div class="employee">
                     <label for="employee">Employee<i class="fa-thin fa-asterisk"></i></label>
-                    <select name="employee" id="employee" >
+                    <select name="employee" id="employee" required >
                         <option value="select">select</option>
                     </select>
                 </div>
                 <div class="expense-name">
                     <label for="expense-name">Expense Name<i class="fa-thin fa-asterisk"></i></label>
-                    <input type="text" class="expense-name-input" id="expense-name" placeholder="Expense Name">
+                    <input type="text" class="expense-name-input" id="expense-name" placeholder="Expense Name" required>
                 </div>
                 <div class="payment-type">
                     <label for="payment-type">Payment Type</label>
@@ -59,17 +64,20 @@
                 </div>
                 <div class="total">
                     <label for="total">Total<i class="fa-thin fa-asterisk"></i></label>
-                    <input type="number" id="total">
+                    <input type="number" id="total" required>
                 </div>
                 <div class="currency">
                     <label for="Currency">Currency<i class="fa-thin fa-asterisk"></i></label>
-                    <select name="currency" id="currency">
+                    <select name="currency" id="currency" required>
                         <option value="select">select</option>
                     </select>
                 </div>
                 <div class="btn">
-                <span class="save">
-                    <button type="button" id="save" onclick="createExp()">Save</button>
+                <span class="save" id="create">
+                    <button type="button" id="submit" onclick="createExp()">Submit</button>
+                </span>
+                <span class="save" id="update">
+                    <button type="button" id="save" onclick="updateData(this)">Save</button>
                 </span>
                 <span class="cancel">
                     <button type="button" id="Cancel">Cancel</button>
@@ -78,12 +86,17 @@
 
         </div>
         <div class="confirm" id="confirm">
+            <div class="box">
             <span class="close" onclick="hideConfirm()">&#10006</span>
-           <span> <button type="button" class="accept"> Accept</button></span>
-           <span><button type="button" class="reject">Reject</button></span>
+           <span> <button type="button" class="accept" onclick="hideConfirm()"> Confirm</button></span>
+           <span><button type="button" class="reject" onclick="hideConfirm()">Cancel</button></span>
+            </div>
         </div>
     <div class="card" id="card">
         <div class="showList" id="showList" >
+            <div class="id">
+                <input type="text" class="id" id="id">
+            </div>
             <div class="employeeName">
                 <label for="e-name">Employee Name</label>
                 <input type="text" class="empolyee-name" name="e-name" id="employeeName">
@@ -98,7 +111,7 @@
             </div>
             <div class="notes">
                 <label for="notes">Notes</label>
-                <input type="text" class="notes" name="notes" id="notes">
+                <input type="text" class="notes" name="notes" id="note">
             </div>
             <div class="total">
                 <label for="total">Total</label>
@@ -106,8 +119,8 @@
                 <input type="text" class="currency-Type" id="currencyType">
             </div>
             <div class="btn">
-                <span><button>Edit</button></span>
-                <span><button>Delete</button></span>
+                <span><button onclick="getSingleCard(this)">Edit</button></span>
+                <span><button onclick="deleted(this)">Delete</button></span>
             </div>
         </div>
     </div>
