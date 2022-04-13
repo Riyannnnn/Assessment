@@ -15,6 +15,7 @@
      document.getElementById("showList").style.display="block";
      document.getElementById("content").style.display="none";
      document.getElementById("card").style.display="flex";
+     show();
  }
  function createShow(){
      document.getElementById("content").style.display="flex";
