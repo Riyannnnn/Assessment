@@ -31,7 +31,7 @@
                 <div class="employee">
                     <label for="employee">Employee<i class="fa-thin fa-asterisk"></i></label>
                     <select name="employee" id="employee" required >
-                        <option value="select">select</option>
+                        <option value="select" selected disabled>select</option>
                     </select>
                 </div>
                 <div class="expense-name">
@@ -41,13 +41,13 @@
                 <div class="payment-type">
                     <label for="payment-type">Payment Type</label>
                     <select name="payment-type" id="payment-type">
-                        <option value="select">select</option>
+                        <option value="select" selected disabled>select</option>
                     </select>
                 </div>
                 <div class="payment-method">
                     <label for="payment-method">Payment Method</label>
                     <select name="payment-method" id="payment-method">
-                        <option value="select">select</option>
+                        <option value="select" selected disabled>select</option>
                     </select>
                 </div>
                 <div class="payment-date">
@@ -69,7 +69,7 @@
                 <div class="currency">
                     <label for="Currency">Currency<i class="fa-thin fa-asterisk"></i></label>
                     <select name="currency" id="currency" required>
-                        <option value="select">select</option>
+                        <option value="select" selected disabled>select</option>
                     </select>
                 </div>
                 <div class="btn">
@@ -80,7 +80,7 @@
                     <button type="button" id="save" onclick="updateData(this)">Save</button>
                 </span>
                 <span class="cancel">
-                    <button type="button" id="Cancel">Cancel</button>
+                    <button type="button" id="Cancel" onClick="window.location.reload();">Cancel</button>
                 </span>
             </div>
 

@@ -1,4 +1,4 @@
- var token = document.cookie="idToken=eyJraWQiOiJhZm5VVTd6STJzdk1ISEcydkl3eE44enlxU0NXck1NNSttUDUxYTZcL0Uydz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNzRjYjg0OS0xNDQ5LTQ0YWUtYmU3YS0wNGU0OTRhNDczYmIiLCJhdWQiOiI3dDgwNzYzN3Q5bmdwYmI1ZHZrOWIwbXV0NSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjljNGRhNTk4LWRhYjAtNDA0OS1iMjQwLTYzMjk5OTRhODhhZSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjQ5NzM0NzA0LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtbm9ydGgtMS5hbWF6b25hd3MuY29tXC9ldS1ub3J0aC0xXzZzMGFMblZFRSIsImNvZ25pdG86dXNlcm5hbWUiOiJjNzRjYjg0OS0xNDQ5LTQ0YWUtYmU3YS0wNGU0OTRhNDczYmIiLCJleHAiOjE2NDk3MzgzMDQsImlhdCI6MTY0OTczNDcwNCwiZW1haWwiOiJnb3V0aGFtQHppcml1cy5pbiJ9.aMxmZ8mK3cAcABUv4QouYVC13XfqAiE3jMV4zYqlYLk7pwTw_fSr6m94jvvy6jD4jreBQDaSy7Wnl5xMSqiQGNj-3kgcqJozi9njjaeObbOMALr9gNzecDg1WgvPjN-RpoNQfBTJXb4mVmCfoGdJW9wE9si-ePlzu607oEmeoijjBZzzH-KDUSZzUQ9J4cvwJkAtSrWI7grx_9UgSbJ4n6CIWcq_WY9eirxl8jN4ZrmxzxE2pOV-DbBRjX9ltfcySwc-f7JtzEztmGPTndLBqiKA6oXBCq713eptUI9RuGBBVgCP2kCXWR2dy_JBMfS2Sap2UvANypNeGHL2E5zyUQ"
+ var token = document.cookie="idToken=eyJraWQiOiJhZm5VVTd6STJzdk1ISEcydkl3eE44enlxU0NXck1NNSttUDUxYTZcL0Uydz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNzRjYjg0OS0xNDQ5LTQ0YWUtYmU3YS0wNGU0OTRhNDczYmIiLCJhdWQiOiI3dDgwNzYzN3Q5bmdwYmI1ZHZrOWIwbXV0NSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjY3ZWRiZDY3LWJhMjAtNGMwOC04M2M1LTMxZDE2MmRlN2RhZSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjQ5ODI1NDQzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuZXUtbm9ydGgtMS5hbWF6b25hd3MuY29tXC9ldS1ub3J0aC0xXzZzMGFMblZFRSIsImNvZ25pdG86dXNlcm5hbWUiOiJjNzRjYjg0OS0xNDQ5LTQ0YWUtYmU3YS0wNGU0OTRhNDczYmIiLCJleHAiOjE2NDk4MjkwNDMsImlhdCI6MTY0OTgyNTQ0MywiZW1haWwiOiJnb3V0aGFtQHppcml1cy5pbiJ9.PPC-97NpK4xnLzbuP8JZBazmAa8yxOjGGuv_w-i8mywMk8ppaU-8PjjwxcLo7H-fGzGBl7DQCfk7ND3nNll8oQUnNpedkC2-AevyB99ne_MMp1U6a7KrQLNXRGhiiCX3TuGfs2AlQ-8330Ui3zMJM3J7PsLb3ycWk0mUGPX45NkzvnjK6QjVOq-4cIXUltIrNbiYztonXDXGt6frginZ4KJ2G_QG1Ud7UdNEabpsuxNzIoRKi_oH98100D84CfrxyTFCoPX1_YySMc98a6pORG4ryuiXYECXsi62yxymYPQ9x9oXljLsIJLijzfGawL9pAIa_YfZ7uMAhfNBWwQyhg"
  var idToken= document.cookie.split("=")[1];
  console.log(idToken);
 
@@ -25,6 +25,7 @@
      document.getElementById("update").style.display="none";
      document.forms[0].reset()
  }
+ 
 
  function employee () {
     paymentType()
@@ -32,7 +33,7 @@
     currency()
 
     var url = "http://localhost/ec/employees";
-    const employeeReq = new XMLHttpRequest();
+    var employeeReq = new XMLHttpRequest();
     employeeReq.open("GET",url,true);
     employeeReq.setRequestHeader("Accept","application/json");
     employeeReq.setRequestHeader("Companyid","14")
@@ -57,7 +58,7 @@
  };
 
  function paymentType(){
-     const typeReq = new XMLHttpRequest();
+     var typeReq = new XMLHttpRequest();
      typeReq.open("GET","../paymentType.json",true);
      typeReq.setRequestHeader("Accept","application/json");
      typeReq.setRequestHeader("Companyid","14")
@@ -81,7 +82,7 @@
 
 function paymentMethod(){
     var url = "http://localhost/ec/paymentMethod"
-     const methodReq = new XMLHttpRequest();
+     var methodReq = new XMLHttpRequest();
      methodReq.open("GET",url,true);
      methodReq.setRequestHeader("Accept","application/json");
      methodReq.setRequestHeader("Companyid","14")
@@ -107,7 +108,7 @@ function paymentMethod(){
 
 function currency(){
     var url = "http://localhost/ec/currencies";
-     const currencyReq = new XMLHttpRequest();
+     var currencyReq = new XMLHttpRequest();
      currencyReq.open("GET",url,true);
      currencyReq.setRequestHeader("Accept","application/json");
      currencyReq.setRequestHeader("Companyid","14");
@@ -130,6 +131,7 @@ function currency(){
 };
 
 function createExp (){
+    listShow()
     function payoutwithSalary(){
         if(document.getElementById("payout-with-salary").checked==true){
            document.getElementById("payout-with-salary").value="Yes";
@@ -147,7 +149,7 @@ function createExp (){
         if(createReq.status==200 && createReq.readyState==4){
             console.log(this.status)
             alert("Successful");
-            listShow()
+            
         }
     }
     var details = { 
@@ -211,9 +213,9 @@ function show(){
 
 function deleted (ref) {
        
-    { var id = ref.parentElement.parentElement.parentElement.getElementsByTagName("input")[0].value;
+     var id = ref.parentElement.parentElement.parentElement.getElementsByTagName("input")[0].value;
         console.log(id);
-        const deleteReq = new XMLHttpRequest();
+        var deleteReq = new XMLHttpRequest();
         deleteReq.open("DELETE","http://localhost/ec/expense/"+id,true);
         deleteReq.setRequestHeader("Content-type","application/json");
         deleteReq.setRequestHeader("Authorization","Bearer"+idToken);
@@ -222,12 +224,11 @@ function deleted (ref) {
             if(deleteReq.readyState==4){
             if(deleteReq.status==200){
                
-                showConfirm()
-                
+                showConfirm();
             }   
             }
         }
-    deleteReq.send();}
+    deleteReq.send();
     
 }
 
@@ -244,7 +245,7 @@ function showEdit(){
 function getSingleCard(ref){
     showEdit()
     var id=ref.parentElement.parentElement.parentElement.getElementsByTagName("input")[0].value;
-    const getSCReq = new XMLHttpRequest();
+    var getSCReq = new XMLHttpRequest();
     getSCReq.open("GET","http://localhost/ec/expenses/"+id,true);
     getSCReq.setRequestHeader("Accept","application/json");
     getSCReq.setRequestHeader("Companyid","14");
@@ -267,9 +268,9 @@ function getSingleCard(ref){
             document.getElementById("total").value=data.expense.amount;
             document.getElementById("currency").value=data.expense.currency.currencyCode;
         }
-
-    }
-    getSCReq.send()
+        
+    }  
+    getSCReq.send();
 }
 
 function updateData(ref){
@@ -277,7 +278,7 @@ function updateData(ref){
     var id = ref.parentElement.parentElement.parentElement.getElementsByTagName("input")[0].value;
     console.log(id);
 
-    const putReq = new XMLHttpRequest();
+    var putReq = new XMLHttpRequest();
     putReq.open("PUT","http://localhost/ec/expense?id="+id,true);
     putReq.setRequestHeader("Accept","application/JSON");
     putReq.setRequestHeader("Content-Type", "application/json");
@@ -319,3 +320,4 @@ function updateData(ref){
     document.getElementById("card").style.display="flex";
     
 }
+
