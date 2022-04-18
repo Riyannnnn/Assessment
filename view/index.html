@@ -36,29 +36,29 @@
                 </div>
                 <div class="employee">
                     <label for="employee">Employee<i class="fa-thin fa-asterisk"></i></label>
-                    <select name="employee" id="employee" onclick="validate()" required>
-                        <option value="" selected disabled>select</option>
+                    <select name="employee" id="employee" onclick="validateEmp()" required>
+                        <option value="" selected disabled>-select-</option>
                     </select>
                 </div>
                 <div class="expense-name">
                     <label for="expense-name">Expense Name<i class="fa-thin fa-asterisk"></i></label>
-                    <input type="text" class="expense-name-input" id="expense-name" placeholder="Expense Name" required>
+                    <input type="text" class="expense-name-input" id="expense-name" placeholder="Expense Name" onchange="expenseName()" required>
                 </div>
                 <div class="payment-type">
                     <label for="payment-type">Payment Type</label>
-                    <select name="payment-type" id="payment-type">
-                        <option value="select" selected disabled>select</option>
+                    <select name="payment-type" id="payment-type" onclick="validatePT()">
+                        <option value="" selected disabled>-select-</option>
                     </select>
                 </div>
                 <div class="payment-method">
                     <label for="payment-method">Payment Method</label>
-                    <select name="payment-method" id="payment-method">
-                        <option value="select" selected disabled>select</option>
+                    <select name="payment-method" id="payment-method" onclick="validatePM()">
+                        <option value="" selected disabled>-select-</option>
                     </select>
                 </div>
                 <div class="payment-date">
                     <label for="payment-date">Payment Date</label>
-                    <input type="date" id="payment-date" class="payment-date">
+                    <input type="date" id="payment-date" class="payment-date" onchange="validatedate() ">
                 </div>
                 <div class="payout-with-salary">
                     <label for="payout-with-salary">Payout with Salary</label>
@@ -70,17 +70,17 @@
                 </div>
                 <div class="total">
                     <label for="total">Total<i class="fa-thin fa-asterisk"></i></label>
-                    <input type="number" id="total" required>
+                    <input type="number" id="total" onchange="validateAmt()" required>
                 </div>
                 <div class="currency">
                     <label for="Currency">Currency<i class="fa-thin fa-asterisk"></i></label>
-                    <select name="currency" id="currency" required>
-                        <option value="select" selected disabled>select</option>
+                    <select name="currency" id="currency" onclick="validateCurrency()" required>
+                        <option value="" selected disabled>-select-</option>
                     </select>
                 </div>
                 <div class="btn">
                     <span class="save" id="create">
-                    <button type="button" id="submit" onclick="createExp()">Submit</button>
+                    <button type="button" id="submit" onclick="createExp()" >Submit</button>
                 </span>
                     <span class="save" id="update">
                     <button type="button" id="save" onclick="updateData(this)">Save</button>
@@ -94,7 +94,7 @@
         <div class="confirm" id="confirm">
             <div class="box">
                 <span class="close" onclick="hideConfirm()">&#10006</span>
-                <span> <button type="button" class="accept" onclick="hideConfirm()"> Confirm</button></span>
+                <span> <button type="button" class="accept" onclick="hideConfirm()" > Confirm</button></span>
                 <span><button type="button" class="reject" onclick="hideConfirm()">Cancel</button></span>
             </div>
         </div>

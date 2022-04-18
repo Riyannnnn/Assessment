@@ -11,13 +11,17 @@
  function hideConfirm() {
      document.getElementById("confirm").style.display = "none";
      show()
+
  }
 
  function listShow() {
      document.getElementById("content").style.display = "none";
      document.getElementById("card").style.display = "flex";
      show();
+
  }
+
+
 
  function createShow() {
      document.getElementById("content").style.display = "flex";
@@ -227,11 +231,9 @@
      deleteReq.setRequestHeader("Authorization", "Bearer" + idToken);
      deleteReq.setRequestHeader("Companyid", "14");
      deleteReq.onreadystatechange = function() {
-         if (deleteReq.readyState == 4) {
-             if (deleteReq.status == 200) {
+         if (deleteReq.readyState == 4 && deleteReq.status == 200) {
+             showConfirm()
 
-                 showConfirm();
-             }
          }
      }
      deleteReq.send();
@@ -327,15 +329,70 @@
 
  }
 
- function validate() {
-     var emp = document.getElementsByTagName("select");
+ function validateEmp() {
+     var emp = document.getElementById("employee");
      console.log(emp);
-     for (let i = 0; i < emp.length; i++) {
-         if (emp[i].value == "") {
-             emp[i].style.border = "2px solid red";
-         } else {
-             emp[i].style.border = "2px solid green"
-         }
+     if (emp.value == "") {
+         emp.style.border = "3px solid red";
+     } else {
+         emp.style.border = "3px solid green";
+     }
+ }
+
+ function validatePT() {
+     var pt = document.getElementById("payment-type");
+     if (pt.value == "") {
+         pt.style.border = "3px solid red";
+     } else {
+         pt.style.border = "3px solid green";
      }
 
+ }
+
+ function validatePM() {
+     var pm = document.getElementById("payment-method");
+     if (pm.value == "") {
+         pm.style.border = "3px solid red";
+     } else {
+         pm.style.border = "3px solid green";
+     }
+
+ }
+
+ function validateCurrency() {
+     var cr = document.getElementById("currency");
+     if (cr.value == "") {
+         cr.style.border = "3px solid red";
+     } else {
+         cr.style.border = "3px solid green";
+     }
+
+ }
+
+ function validateAmt() {
+     var amt = document.getElementById("total");
+     if (amt.value == "" || amt.value == null) {
+         amt.style.border = "3px solid red";
+     } else {
+         amt.style.border = "3px solid green";
+     }
+ }
+
+ function expenseName() {
+     var expname = document.getElementById("expense-name");
+     var expenseNameReg = /^[a-zA-Z]+([a-z][A-Z][-][0-9]*)*/;
+     if (expenseNameReg.test(expname.value)) {
+         expname.style.border = "3px solid green";
+     } else {
+         expname.style.border = "3px solid red";
+     }
+ }
+
+ function validatedate() {
+     var paymentDate = document.getElementById("payment-date");
+     if (paymentDate.value == "" || paymentDate.value == null) {
+         paymentDate.style.border = "3px solid red";
+     } else {
+         paymentDate.style.border = "3px solid green";
+     }
  }

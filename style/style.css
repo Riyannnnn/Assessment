@@ -150,6 +150,7 @@ select {
     border: none;
     padding: 5px 10px;
     box-shadow: 2px 2px 2px grey;
+    /* border: 3px solid white; */
 }
 
 input .checkbox {
