@@ -482,7 +482,7 @@
          returnValueExp = true;
      } else {
          expname.style.border = "3px solid red";
-         //  alert(expname.validationMessage)
+
          returnValueExp = false;
      }
      buttonToggle(returnValueExp);

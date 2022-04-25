@@ -27,7 +27,7 @@
                 <h3 class="h3"><i class="fa-solid fa-circle-info"></i>Expense Claim Details</h3>
             </div>
             <div class="heading" id="head2">
-                <h3>Edit Details</h3>
+                <h3 class="h3">Edit Details</h3>
             </div>
 
             <form onsubmit="event.preventDefault();" class="form" id="form" name="form">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="employee">
                     <label for="employee">Employee<i class="fa-thin fa-asterisk"></i></label>
-                    <select name="employee" id="employee" onclick="employeeValue()" required>
+                    <select name="employee" id="employee" onblur="employeeValue()" required>
                         <option value="" selected disabled>-select-</option>
                     </select>
                 </div>
@@ -46,13 +46,13 @@
                 </div>
                 <div class="payment-type">
                     <label for="payment-type">Payment Type</label>
-                    <select name="payment-type" id="payment-type" onclick="validatePT()">
+                    <select name="payment-type" id="payment-type" onblur="validatePT()">
                         <option value="" selected disabled>-select-</option>
                     </select>
                 </div>
                 <div class="payment-method">
                     <label for="payment-method">Payment Method</label>
-                    <select name="payment-method" id="payment-method" onclick="validatePM()">
+                    <select name="payment-method" id="payment-method" onblur="validatePM()">
                         <option value="" selected disabled>-select-</option>
                     </select>
                 </div>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="currency">
                     <label for="Currency">Currency<i class="fa-thin fa-asterisk"></i></label>
-                    <select name="currency" id="currency" onclick="currrencyValue()" required>
+                    <select name="currency" id="currency" onblur="currrencyValue()" required>
                         <option value="" selected disabled>-select-</option>
                     </select>
                 </div>
@@ -86,7 +86,7 @@
                     <button type="button" id="save"  onclick="updateData(this)" disabled>Update</button>
                 </span>
                     <span class="cancel">
-                    <button type="button" id="Cancel" onClick="window.location.reload();">Cancel</button>
+                    <button type="button" id="Cancel" class="cancel-btn" onClick="window.location.reload();">Cancel</button>
                 </span>
                 </div>
             </form>
@@ -126,7 +126,7 @@
             </div>
             <div class="btn" id="btn">
                 <span><button onclick="getSingleCard(this)">Edit</button></span>
-                <span class="delete-button"><button onclick="deleted(this)">Delete</button></span>
+                <span><button class="delete-btn" onclick="deleted(this)">Delete</button></span>
             </div>
         </div>
 
